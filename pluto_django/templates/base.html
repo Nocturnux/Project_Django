@@ -99,7 +99,7 @@
                         <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Additional Pages</span></a>
                         <ul class="collapse list-unstyled" id="additional_page">
                            <li>
-                              <a href="profile.html">> <span>Profile</span></a>
+                              <a href="{% url 'Customer' %}">> <span>Customer</span></a>
                            </li>
                            <li>
                               <a href="project.html">> <span>Projects</span></a>
@@ -190,5 +190,11 @@
      <!-- custom js -->
      <script src="{% static 'js/custom.js' %}"></script>
      <script src="{% static 'js/chart_custom_style1.js' %}"></script>
+         <!-- Page level plugins -->
+      <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+      <script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+      <!-- Page level custom scripts -->
+      <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
   </body>
 </html>                
