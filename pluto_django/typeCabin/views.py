@@ -1,10 +1,10 @@
 
 from django.shortcuts import render, redirect
 
-from typeCabin.models import typeCabin
+from typeCabin.models import TypeCabin
 
 def typeCabin(request):    
-    typeCabin_list = typeCabin.objects.all()    
+    typeCabin_list = TypeCabin.objects.all()    
     return render(request, 'typeCabin/index.html', {'typeCabin_list': typeCabin_list})
 
 def change_status_typeCabin(request, typeCabin_id):
