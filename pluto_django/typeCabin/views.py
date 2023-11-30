@@ -8,7 +8,7 @@ def typeCabin(request):
     return render(request, 'typeCabin/index.html', {'typeCabin_list': typeCabin_list})
 
 def change_status_typeCabin(request, typeCabin_id):
-    typeCabin = typeCabin.objects.get(pk=typeCabin_id)
+    typeCabin = TypeCabin.objects.get(pk=typeCabin_id)
     typeCabin.status = not typeCabin.status
     typeCabin.save()
     return redirect('typeCabin')
