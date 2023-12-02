@@ -7,7 +7,7 @@
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h4 class="m-0 font-weight-bold text-primary">Cabaña</h4>
+        <h4 class="m-0 font-weight-bold text-primary">ReservaVenta</h4>
     </div>
     <div class="card-body">
         <div class="table-responsive">            
@@ -15,30 +15,35 @@
                 <span class="icon text-white-50">
                     <i class="fas fa-plus"></i>
                 </span>
-                <span class="text">Create Cabins</span>
+                <span class="text">Crear ReservaVenta</span>
             </a>
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead class="table-dark">
                     <tr>
-                        <th>Nombre</th>
-                        <th>Capacidad</th>
-                        <th>Descripcion</th>
-                        <th>Estado</th>                       
+                        <th>Fecha</th>
+                        <th>Total</th>
+                        <th>Descripción</th>
+                        <th>FechaInicio</th>
+                        <th>FechaFin</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>                        
                     </tr>
                 </thead>                
                 <tbody>
-                    {% for cabin in cabin_list %}
+                    {% for reservation_sale in reservation_sale_list %}
                     <tr>
-                    <td><img src="{{ cabin.image.url }}" alt="" width="50"></td>
-                    <td>{{ cabin.name }}</td>
-                    <td>{{ cabin.capacity }}</td>
-                    <td>{{ cabin.description }}</td>
-                    <td>{{ cabin.status }}</td>                                     
+                    <td><img src="{{ reservation_sale.image.url }}" alt="" width="50"></td>
+                    <td>{{ reservation_sale.date }}</td>
+                    <td>{{ reservation_sale.total }}</td>
+                    <td>{{ reservation_sale.description }}</td>
+                    <td>{{ reservation_sale.start_date }}</td>
+                    <td>{{ reservation_sale.end_date }}</td>
+                    <td>{{ reservation_sale.status }}</td>                                       
                     <td>
-                        <form action="{% url 'cabin_status' cabin.id %}" method="POST">
+                        <form action="{% url 'reservation_sale_status' reservation_sale.id %}" method="POST">
                             {% csrf_token %}                            
                             <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch{{ forloop.counter }}" {% if cabin.status %} checked {% endif %} onchange="this.form.submit()">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch{{ forloop.counter }}" {% if reservation_sale.status %} checked {% endif %} onchange="this.form.submit()">
                                 <label class="custom-control-label" for="customSwitch{{ forloop.counter }}"></label>
                             </div>                     
                         </form>
