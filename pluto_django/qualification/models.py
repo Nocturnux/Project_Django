@@ -4,7 +4,7 @@ class Qualification(models.Model):
     qualification_date = models.DateField()
     score = models.IntegerField()
     status = models.BooleanField(default=True)
-    reservation_sale = models.ForeignKey('qualification.Qualification', on_delete=models.DO_NOTHING)
+    reservation_sale = models.ForeignKey('reservation_sale.Reservation_sale', on_delete=models.DO_NOTHING)
 
 
 
