@@ -30,5 +30,6 @@ urlpatterns = [
     path('reservation_sale/', include('reservation_sale.urls')),  
     path('cabin_facility/', include('cabin_facility.urls')),
     path('payment/', include('payment.urls')),
-    path('qualification/', include('qualification.urls')),      
+    path('qualification/', include('qualification.urls')),
+    path('reservation_services/', include('reservation_services.urls')),      
 ]
