@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'reservation_sale',
     'cabin_facility',
     'payment',
+    'qualification',
 ]
 
 MIDDLEWARE = [
