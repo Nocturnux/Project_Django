@@ -22,8 +22,11 @@
                     <tr>
                         <th>Nombre</th>
                         <th>Capacidad</th>
+                        <th>Tipo cabaña</th>
                         <th>Descripcion</th>
-                        <th>Estado</th>                       
+                        <th>Estado</th>  
+                        
+
                     </tr>
                 </thead>                
                 <tbody>
@@ -32,6 +35,7 @@
                     <td><img src="{{ cabin.image.url }}" alt="" width="50"></td>
                     <td>{{ cabin.name }}</td>
                     <td>{{ cabin.capacity }}</td>
+                    <td>{{ cabin.typecabin }}</td>
                     <td>{{ cabin.description }}</td>
                     <td>{{ cabin.status }}</td>                                     
                     <td>
