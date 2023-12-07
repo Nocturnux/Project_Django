@@ -5,12 +5,10 @@ from django.db import models
 class Reservation_sale(models.Model):
     date = models.DateField()
     total = models.CharField(max_length=50)
-    description = models.TextField(max_length=255)
     start_date = models.DateField()
     end_date = models.DateField()
     status = models.BooleanField(default=True)
     customer= models.ForeignKey('Customer.customer', on_delete=models.DO_NOTHING)
-    cabin= models.ForeignKey('cabin.Cabin', on_delete=models.DO_NOTHING)
 
 
 def __str__(self):
