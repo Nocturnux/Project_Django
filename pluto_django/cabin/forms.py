@@ -7,12 +7,10 @@ class CabinForm(forms.ModelForm):
         fields = "__all__"
         exclude = ['status']
         labels = {
-
             'name': 'Nombre',
             'capacity': 'Capacidad',
             'typeCabin': 'Tipo cabaña',
-            'description': 'Descripción',
-                                 
+            'description': 'Descripción',                        
         }
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Ingresa el nombre'}),
