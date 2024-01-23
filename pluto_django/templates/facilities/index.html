@@ -8,11 +8,11 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">            
-            <a href="" class="btn btn-primary btn-icon-split mb-3">
+            <a href="{% url 'create_facilities' %}" class="btn btn-primary btn-icon-split mb-3">
                 <span class="icon text-white-50">
-                    <i class="fas fa-plus"></i>
-                </span>
-                <span class="text">Crear comodidades</span>
+                  <i class="fas fa-plus"></i>
+              </span>
+              <span class="text">Crear Comodidad</span>
             </a>
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead class="table-dark">
@@ -26,8 +26,7 @@
                     {% for facilities in facilities_list %}
                     <tr>
                     <td>{{ facilities.name }}</td>
-                    <td>{{ facilities.document }}</td>
-                    <td>{{ facilities.nationality }}</td>
+                    
                     <!-- Toggle Switch button -->
                     <td>
                         <form action="{% url 'facilities_status' facilities.id %}" method="POST">

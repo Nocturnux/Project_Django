@@ -26,6 +26,7 @@
                         <th>Tipo cabaña</th>
                         <th>Descripcion</th>
                         <th>Estado</th>  
+                        <th>Acciones</th>  
                         
 
                     </tr>
@@ -38,7 +39,6 @@
                     <td>{{ cabin.capacity }}</td>
                     <td>{{ cabin.typecabin }}</td>
                     <td>{{ cabin.description }}</td>
-                    <td>{{ cabin.status }}</td>                                     
                     <td>
                         <form action="{% url 'cabin_status' cabin.id %}" method="POST">
                             {% csrf_token %}                            
